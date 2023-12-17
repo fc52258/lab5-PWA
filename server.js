@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const fse = require('fs-extra');
-const httpPort = 10000;
+const httpPort = 80;
 let VERSION;
 
 if (process.env.VER) {
@@ -91,8 +91,8 @@ app.post("/saveSubscription", function(req, res) {
 
 async function sendPushNotifications(snapTitle) {
     webpush.setVapidDetails('mailto:fc52258@fer.hr', 
-    process.env.PUBLIC_VAPID_KEY, 
-    process.env.PRIVATE_VAPID_KEY);
+    "BE-SGqbYwwnMoTMLB4E7WyeawN2cxbv8EBTXQNuD_DLpWUyLiv9QDm8WHdTqasuhl9-p41pXK4y10y6MJIp8Sw4", 
+    "bUv5C7gkX30yTPw3FSjgyJWkuKzIu_mWXgrLK0v4hBg");
     subscriptions.forEach(async sub => {
         try {
             console.log("Sending notif to", sub);
