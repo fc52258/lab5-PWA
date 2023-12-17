@@ -1,0 +1,20 @@
+{
+    "name": "PWA-lab5",
+    "version": "1.0.0",
+    "description": "PWA lab5 0036522584",
+    "main": "server.js",
+    "scripts": {
+        "ver01": "SET VER=01 && nodemon --inspect server.js",
+        "gen-vapid": "web-push generate-vapid-keys"
+    },
+    "author": "fcindric0036522584",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "fs-extra": "^10.0.0",
+        "multer": "^1.4.3",
+        "nodemon": "^2.0.12",
+        "package.json": "^2.0.1",
+        "web-push": "^3.4.5"
+    }
+}
