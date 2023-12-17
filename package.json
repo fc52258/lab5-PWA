@@ -4,7 +4,7 @@
     "description": "PWA lab5 0036522584",
     "main": "server.js",
     "scripts": {
-        "ver01": "SET VER=01 && nodemon --inspect server.js",
+        "ver01": "set VER=01 && nodemon --inspect server.js",
         "gen-vapid": "web-push generate-vapid-keys"
     },
     "author": "fcindric0036522584",
