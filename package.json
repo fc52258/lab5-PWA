@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "ver01": "set VER=01 && nodemon --inspect server.js",
-        "gen-vapid": "web-push generate-vapid-keys"
+        "gen-vapid": "web-push generate-vapid-keys",
+        "server": "set VER=01 && nodemon --inspect server.js"
     },
     "author": "fcindric0036522584",
     "license": "MIT",

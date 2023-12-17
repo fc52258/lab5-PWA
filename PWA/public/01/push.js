@@ -37,12 +37,12 @@ async function setupPushSubscription() {
         let sub = await reg.pushManager.getSubscription();
         if (sub === null) {
             var publicKey =
-                "BE-SGqbYwwnMoTMLB4E7WyeawN2cxbv8EBTXQNuD_DLpWUyLiv9QDm8WHdTqasuhl9-p41pXK4y10y6MJIp8Sw4";
+                process.env.PUBLIC_VAPID_KEY;
             sub = await reg.pushManager.subscribe({
                 userVisibleOnly: true,
-                applicationServerKey: urlBase64ToUint8Array(publicKey)
+                applicationServerKey: urlBase64ToUint8Array()
             });
-            let res = await fetch("/saveSubscription", {
+            let res = await fetch("https://pwa-0035522584.onrender.com/saveSubscription", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
