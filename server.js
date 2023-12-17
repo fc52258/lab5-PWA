@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const fse = require('fs-extra');
-const httpPort = 443;
+const httpPort = 10000;
 let VERSION;
 
 if (process.env.VER) {
